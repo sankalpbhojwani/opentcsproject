@@ -1,0 +1,35 @@
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+  <persistence-unit name="db-manager">
+  
+    <class>org.opentcs.util.persistence.models.Model</class>
+    <class>org.opentcs.util.persistence.models.VisualLayout</class>
+    <class>org.opentcs.util.persistence.models.Property</class>
+    <class>org.opentcs.util.persistence.models.ModelLayoutElement</class>
+    <class>org.opentcs.util.persistence.models.Vehicle</class>
+    <class>org.opentcs.util.persistence.models.Point</class>
+    <class>org.opentcs.util.persistence.models.OutgoingPath</class>
+    <class>org.opentcs.util.persistence.models.Path</class>
+    <class>org.opentcs.util.persistence.models.Location</class>
+    <class>org.opentcs.util.persistence.models.Link</class>
+    <class>org.opentcs.util.persistence.models.LocationType</class>
+    <class>org.opentcs.util.persistence.models.AllowedOperation</class> 
+    <class>org.opentcs.util.persistence.models.Block</class>
+    <class>org.opentcs.util.persistence.models.Member</class>
+    <class>org.opentcs.util.persistence.models.XmlModel</class>
+    <class>org.opentcs.util.persistence.models.VehicleStatus</class>
+    <properties>
+    	<property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />
+      <!-- Disable the second-level cache  -->
+      <property name="hibernate.archive.autodetection" value="class, hbm" />
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+
+      <!-- Default is false for backwards compatibility.  Should be used on all new projects -->
+      <property name="hibernate.id.new_generator_mappings" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
